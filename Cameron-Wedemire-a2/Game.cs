@@ -11,6 +11,9 @@ namespace MohawkGame2D
     /// </summary>
     public class Game
     {
+        //variables go here
+        bool clickingOnGlass = false;
+
         /// <summary>
         ///     Setup runs once before the game loop begins.
         /// </summary>
@@ -76,13 +79,29 @@ namespace MohawkGame2D
             if (Input.IsMouseButtonUp(MouseButton.Left))
             {
                 Draw.SetFillColor(60, 60, 50); // grey
+                clickingOnGlass = false;
+
             }
             else
             {
                 Draw.SetFillColor(230, 230, 10); // Yellow
+                if ((Input.GetMouseX() > 220) & (Input.GetMouseX() < 290) & (Input.GetMouseY() > 200) & (Input.GetMouseY() < 250))
+                {
+                    //if clicking on window will show guy inside the window till you turn out the lights (changes variable so it can make it after making the window)
+                    clickingOnGlass = true;
+                }
             }
             Draw.Rectangle(220, 200, 70, 50);
             Draw.Circle(350, 230, 10);
+
+            if (clickingOnGlass==true)
+            {
+                //draw denizen of the tavern
+                Draw.SetFillColor(70, 50, 50);
+                Draw.Circle(270, 240, 9);
+                Draw.Circle(267, 238, 2);
+                Draw.Circle(273, 238, 2);
+            }
 
             //window frame
             Draw.SetFillColor(100, 70, 70);
