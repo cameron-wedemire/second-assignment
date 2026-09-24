@@ -1,4 +1,5 @@
 ﻿// Include the namespaces (code libraries) you need below.
+using Raylib_cs;
 using System;
 using System.Numerics;
 
@@ -30,7 +31,6 @@ namespace MohawkGame2D
             Draw.SetLineSize(3);
 
             //draw the fill of the top of the cave
-            //Draw.Triangle();
             Draw.SetFillColor(50, 50, 50);
             Draw.SetLineColor(50, 50, 50);
             Draw.Triangle(0, 25, 50, 100, 125, 75);
@@ -90,20 +90,38 @@ namespace MohawkGame2D
             Draw.Rectangle(220, 222, 35, 7);
             Draw.Rectangle(253, 222, 36, 7);
 
-            //draw the shader(mouse clicked turn yellow shader on, mouse released turn it off) //Dont know how to get opacity yet so will need to cancel this part
-            //if (Input.IsMouseButtonUp(MouseButton.Left))
-            //{
-            //    Draw.SetFillColor(60, 60, 50); // grey
-            //}
-            //else
-            //{
-            //    Draw.SetFillColor(230, 230, 10); // Yellow
-            //}
-            //Draw.Rectangle(0, 0, 600, 400);
+            //Draw Foreground //Draw.Triangle();
+            Draw.SetLineSize(3);
 
-            //draw the foreground
-            //Draw.Line();
+            //draw the fill of the foreground
+            Draw.SetFillColor(50, 50, 50);
+            Draw.SetLineColor(50, 50, 50);
+            Draw.Rectangle(0, 300, 600, 100);
+            Draw.Triangle(0, 200, 75, 220, 130, 270);
+            Draw.Triangle(0, 300, 0, 200, 180, 300);
 
+            Draw.Triangle(180, 300, 210, 280, 290, 270);
+            Draw.Triangle(290, 270, 360, 300, 290, 300);
+            Draw.Triangle(180,300,290,270,290,300);
+
+
+            Draw.Triangle(340, 290, 415, 270, 360, 300);
+            Draw.Triangle(415, 270, 470, 230, 550, 280);
+            Draw.Triangle(550, 280, 600, 240, 600, 300);
+            Draw.Quad(340, 300, 415, 270, 550, 280, 600, 300);
+
+            //draw the outline of the top of foreground
+            Draw.SetLineColor(187, 160, 130);
+            Draw.Line(0, 200, 75, 220);
+            Draw.Line(75, 220, 130, 270);
+            Draw.Line(130, 270, 180, 300);
+            Draw.Line(180, 300, 210, 280);
+            Draw.Line(210, 280, 290, 270);
+            Draw.Line(290, 270, 340, 290);
+            Draw.Line(340, 290, 415, 270);
+            Draw.Line(415, 270, 470, 230);
+            Draw.Line(470, 230, 550, 280);
+            Draw.Line(550, 280, 600, 240);
         }
     }
 
