@@ -40,6 +40,15 @@ namespace MohawkGame2D
             Draw.Line(530, 100, 560, 80);
             Draw.Line(560, 80, 600, 40);
 
+            //0, 25, 50, 100, 125, 75, 500, 130 , 175, 90, 250, 70, 300, 100, 430, 87, 530, 100, 560, 80
+            //Draw.Triangle(0, 25, 50, 100, 125, 75);
+            //Draw.Triangle(500,130,175,90,250,70);
+            //Draw.Triangle(300,100,430,87,530,100);
+
+            //cover the lines i dont want from the fill
+            //Draw.SetFillColor(100,100,100);
+            //Draw.Line(0, 25, 125, 75);
+
             //draw the tavern
             //base shape
             Draw.SetFillColor(139, 69, 19);
