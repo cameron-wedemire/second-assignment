@@ -24,13 +24,31 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
         {
-
+            Window.ClearBackground(100, 100, 100);
 
             //draw the top of cave
             Draw.SetLineSize(3);
+
+            //draw the fill of the top of the cave
+            //Draw.Triangle();
+            Draw.SetFillColor(50, 50, 50);
+            Draw.SetLineColor(50, 50, 50);
+            Draw.Triangle(0, 25, 50, 100, 125, 75);
+            Draw.Triangle(125, 75, 175, 90, 250, 70);
+            Draw.Triangle(250, 70, 300, 100, 430, 87);
+            Draw.Triangle(430, 87, 500, 130, 530, 100);
+            Draw.Triangle(560,80,600,40,600,0);
+
+            Draw.Triangle(0, 25, 125, 76, 250, 70);
+            Draw.Triangle(0, 25, 250, 70, 530, 100);
+            Draw.Triangle(530, 100, 560, 80, 600, 0);
+            Draw.Triangle(0, 25, 530, 100, 600, 0);
+            Draw.Triangle(0, 0, 0, 25, 600, 0);
+            
+            //draw the outline of the top of the cave
             Draw.SetLineColor(187, 160, 130);
             Draw.Line(0, 25, 50, 100);
-            Draw.Line(50,100, 125, 75);
+            Draw.Line(50, 100, 125, 75);
             Draw.Line(125, 75, 175, 90);
             Draw.Line(175, 90, 250, 70);
             Draw.Line(250, 70, 300, 100);
@@ -40,14 +58,6 @@ namespace MohawkGame2D
             Draw.Line(530, 100, 560, 80);
             Draw.Line(560, 80, 600, 40);
 
-            //0, 25, 50, 100, 125, 75, 500, 130 , 175, 90, 250, 70, 300, 100, 430, 87, 530, 100, 560, 80
-            //Draw.Triangle(0, 25, 50, 100, 125, 75);
-            //Draw.Triangle(500,130,175,90,250,70);
-            //Draw.Triangle(300,100,430,87,530,100);
-
-            //cover the lines i dont want from the fill
-            //Draw.SetFillColor(100,100,100);
-            //Draw.Line(0, 25, 125, 75);
 
             //draw the tavern
             //base shape
